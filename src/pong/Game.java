@@ -14,15 +14,15 @@ import javax.swing.WindowConstants;
 
 public class Game extends Canvas implements Runnable, KeyListener {
 
-    public static int WIDTH = 240, HEIGHT = 120;
+    public static int WIDTH = 120, HEIGHT = 120;
 
-    public static int SCALE = 3;
+    public static int SCALE = 4;
 
     public BufferedImage layer = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
 
-    public Player player;
+    public static Player player;
 
-    public Enemy enemy;
+    public static Enemy enemy;
 
     public static Ball ball;
 
@@ -31,9 +31,9 @@ public class Game extends Canvas implements Runnable, KeyListener {
 
         this.addKeyListener(this);
 
-        player = new Player(100, HEIGHT - 10);
-        enemy = new Enemy(100, 0);
-        ball = new Ball(100, HEIGHT/2 - 1);
+        player = new Player(WIDTH/2, HEIGHT - 5);
+        enemy = new Enemy(WIDTH/2, 0);
+        ball = new Ball(WIDTH/2, HEIGHT/2 - 1);
     }
 
     public static void main(String[] args) {
